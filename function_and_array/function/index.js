@@ -62,3 +62,23 @@ function outer() {
 }
 outer();
 console.log(name);
+
+
+//function expression
+// function as a value assigning to a variable 
+var fact = function factorial(n) {// named function factorial can be used within the function factorial 
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);
+}
+console.log(fact(5));
+var fact2 = function (n) {// annonyms function
+    var ans = 1;
+    for (var i = 1; i <= n; i++){
+        ans *= i;
+    }
+    return ans
+}
+console.log(fact2(5));
+
+
