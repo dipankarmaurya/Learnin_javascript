@@ -48,3 +48,17 @@ function a() {
 }
 a();
 console.log("gloabal context");
+
+//function within function
+var name = "global";
+function outer() {
+    var name = "outer";
+    function inner() {
+        var name = "inner";//  if this name is availabe here it looks for it in outer execution context and then global execution context
+        console.log(name);
+    }
+    inner();
+    console.log(name);
+}
+outer();
+console.log(name);
