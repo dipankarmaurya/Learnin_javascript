@@ -72,7 +72,7 @@ var fact = function factorial(n) {// named function factorial can be used within
     return n * factorial(n - 1);
 }
 console.log(fact(5));
-var fact2 = function (n) {// annonyms function
+var fact2 = function (n) {// annonyms function expression
     var ans = 1;
     for (var i = 1; i <= n; i++){
         ans *= i;
@@ -80,5 +80,26 @@ var fact2 = function (n) {// annonyms function
     return ans
 }
 console.log(fact2(5));
+
+//function declaration vs function expression
+//hoisting in function expression is work like variable hoisting 
+// means its first declare on top then define value;
+//ex--->
+
+//dipankar();//says dipankar is not a function
+// console.log(dipankar);// print undefined
+// var dipankar =function dipu() {
+//     console.log(`i am learning javascript `);
+// }
+
+// how upper function actully look like for interpreater
+//---->>>>|
+//        |
+var dipankar;
+//dipankar();
+console.log(dipankar);
+dipankar = function dipu() {
+    console.log(`i am learning javascript`);
+}
 
 
