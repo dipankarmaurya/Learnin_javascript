@@ -97,9 +97,17 @@ console.log(fact2(5));
 //        |
 var dipankar;
 //dipankar();
-console.log(dipankar);
-dipankar = function dipu() {
-    console.log(`i am learning javascript`);
+// console.log(dipankar);
+dipankar = function dipu(msg) {
+    console.log(msg);
 }
+//passing function as an argument
+function print(dipankar) {
+    dipankar("learning_function");
+
+}
+print(dipankar);
+
+
 
 
