@@ -96,9 +96,9 @@ console.log(fact2(5));
 //---->>>>|
 //        |
 var dipankar;
-//dipankar();
-// console.log(dipankar);
-dipankar = function dipu(msg) {
+ dipankar();
+ console.log(dipankar);
+ dipankar = function dipu(msg) {
     console.log(msg);
 }
 //passing function as an argument
