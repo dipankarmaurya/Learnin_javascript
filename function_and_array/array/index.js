@@ -65,4 +65,41 @@ console.log(arr);
 arr.fill(7, 1, 4);// 7 from index 1 to 2
 console.log(arr);
 
+//filter()---> create a new array with all the element in array that pass the test implemented by provide function
+let words = ['watre', 'slice', 'air', 'glass', 'handbag,wire']
 
+let filteredArr = words.filter((elem) => elem.length == 5);
+console.log(filteredArr);//[ 'watre', 'slice', 'glass' ]
+
+//filter prime number from an array
+let array = [-1, -3, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
+function isPrime(num) {
+    for (let i = 2; i * i <= num; i++){
+        if (num % i == 0)
+            return false
+    }
+    return num > 1;
+}
+let prime = array.filter(isPrime);
+console.log(prime);
+
+//forEach()-->> execute a provide function once for each element of array
+array.forEach(ele => {
+    if (isPrime(ele)) {
+        console.log(ele) 
+    }
+});
+
+//map()-->
+let mappedArray = array.map(ele => { return ele*10; });
+console.log(mappedArray);//mappedArray size==array if it not find any condition that is not true for any element it return undefined 
+
+/*[
+    -10, -30,  20,  30, 40,
+     50,  60,  70,  80, 90,
+    100, 110, 120, 130
+ ]*/
+
+ //forEach() VS filter
+ // forEach() is just loop over the array and executes the callback
+ //filter() executes the callbacks and check the return value;
