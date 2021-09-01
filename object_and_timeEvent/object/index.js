@@ -27,3 +27,23 @@ console.log(student);//{ name: 'dipankar', rollNo: 23, marks: 95, sem: 4 }
 
 // in js object have no access modifiers (public,private ,protected in languages like c,c++) its just simple key value pair
 
+//crete object using square bracket--->>()
+var obj = new Object();
+
+// delete properity of an object
+//1-->
+delete student.marks;
+console.log(student);
+delete student["name"];
+console.log(student);
+
+// iterating in object
+for (var prop in student) {
+    console.log(prop,"--->",student[prop]);
+}
+//find all keys 
+var keys = Object.keys(student);
+console.log(keys);
+//or
+var keys = Object.getOwnPropertyNames(student);
+console.log(keys);
