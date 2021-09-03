@@ -47,3 +47,40 @@ console.log(keys);
 //or
 var keys = Object.getOwnPropertyNames(student);
 console.log(keys);
+/// nested objects
+
+let myProfile = {
+    name: {
+        firstName: "Dipankar",
+        lastName:"maurya"
+    },
+    DOB: {
+        date:21,
+        month: "october",
+        year:1998
+    },
+    address: {
+        city: "jaunpur Uttar Pradesh",
+        pinCode:221201
+    }
+}
+console.log(myProfile);
+console.log(myProfile.name.firstName);//or console.log(myProfile.name["firstName"]);
+console.log(myProfile.DOB);
+console.log(myProfile.address);
+
+let info = Object.getOwnPropertyNames(myProfile.name);
+console.log(info);
+// arrays and objects
+// in js arrays are objets with some more additional properity
+let employee = ['suresh', 'ram', 'dinkar', 'anuj'];
+//keys are the indexes and value is the elements
+console.log(employee);
+let emp = {
+    0: "suresh",
+    1: 'ram',
+    2: 'dinkar',
+    3: 'anuj'
+}
+console.log(emp);
+
