@@ -24,15 +24,39 @@
 //  console.log(obj.abc()());
 
 
-'use strict'
-function abc() {
-  console.log(this.name);
+// 'use strict'
+// function abc() {
+//   console.log(this.name);
+// }
+// var obj={
+//   name: {
+//     first: "dipankar",
+//     last:"maurya"
+//   }
+// }
+// abc.call(obj);
+// // window.abc();
+//'use strict'
+function bike(namee) {
+   this.namee = namee;
+  this.maker = function(){
+    return this.namee;
+ }
 }
-var obj={
-  name: {
-    first: "dipankar",
-    last:"maurya"
+
+//var namee = "Pulsar";
+//var maker = "Bajaj";
+var obj = new bike("xyxxx");
+console.log(obj);
+// console.log(obj.namee);
+// console.log(obj.maker); 
+function Vehicle(brand, price) {
+  this.price = price;
+  this.brand = brand;
+  this.getPrice= function(){
+    return this.price;
   }
 }
-abc.call(obj);
-// window.abc();
+var v = new Vehicle("motororla", 5000000);
+console.log(v);
+console.log(v.getPrice())
