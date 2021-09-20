@@ -1,0 +1,37 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://cdn.wallpapersafari.com/83/43/ydfZav.jpg");
+}
+
+#container{
+    /* height: 500px;
+    width: 400px;
+    border: 2px dotted green; */
+    /* background-color: black; */
+    position: relative;
+}
+
+#ball {
+    width: 40px;
+    height: 40px;
+    background-color:lightblue;
+    position: fixed;
+    bottom:22px; 
+    left: 55.9%;
+    border-radius: 50%;
+}
+
+
+#rod{
+    width: 200px;
+    height: 20px;
+    position: fixed;
+    left: 50%;
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(205, 225, 226);
+    bottom: 0px;
+}
