@@ -30,4 +30,4 @@ function move() {
 }
 
 let run= setInterval(move, 10);
-// ball.addEventListener('click',move)
+// ball.addEventListener('click',move) 

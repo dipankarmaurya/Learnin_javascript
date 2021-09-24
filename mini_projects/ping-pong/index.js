@@ -5,24 +5,34 @@ let rod = document.getElementById("rod");
 let rodRect = rod.getBoundingClientRect();
 let rodLeft = rodRect.x;
 let gameOn = false;
-let ballSpeedX = 10,ballSpeedY=10;
+let ballSpeedX = 5,ballSpeedY=5;
 
 function reset() {
   rod.style.left = (window.innerWidth - rod.offsetWidth) / 2 + "px";
   ball.style.left = (window.innerWidth - ball.offsetWidth) / 2 + "px";
   gameOn = false;
+  ball.animate([
+    { transform: 'translateY(0px)' },
+    { transform: 'translateY(-50px)' },
+    { transform: 'translateY(0px)' },
+    { transform: 'translateY(-25px)' },
+    { transform: 'translateY(0px)' },
+  ], {
+    duration: 500,
+    iterations:1
+  })
 };
 function moveBall() {}
 window.addEventListener("keydown", (Event) => {
   if (Event.keyCode == 39) {
     if (gameOn && rodLeft + rod.offsetWidth <= window.innerWidth) {
-      rodLeft += 40;
+      rodLeft += 10;
      // console.log(rodLeft);
       rod.style.left = rodLeft + "px";
     }
   } else if (Event.keyCode == 37) {
     if (gameOn && rodLeft >= 0) {
-      rodLeft -= 40;
+      rodLeft -= 10;
       rod.style.left = rodLeft + "px";
     }
   }

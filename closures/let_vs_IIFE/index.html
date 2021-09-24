@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>hello</p>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    here we add to script file <b>script.js</b> and <b>index.js</b> both contains global variable <b>fileName</b> javascript script does not make two variable of <b>filename</b> insted it override the the value of <b>fileName</b>
+    thats why we should avoid global varialbe <br>
+    <b>solution----->>>></b>
+    <ul>
+        <li><b>use let(introduce in ES6)</b></li>
+        <details>let is block-scoped local variable it allows to declare a variable that are limited to the scope of a block</details>
+        <li><b>use IIFE</b></li>
+        <details> <pre><b>Syntax</b>
+            (function(){
+                statements
+            })();
+        </pre></details>
+    </ul>
+
+</body>
+</html>
