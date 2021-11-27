@@ -1,2 +1,2 @@
-# Learnin_javascript
+# Learning_javascript
 daily javascript learning  plan
